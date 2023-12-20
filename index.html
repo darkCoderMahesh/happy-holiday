@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wishing you and your family a healthy, happy holiday. </title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      video {
+        width: 100%;
+      }
+      #unmuteButton {
+        color: white;
+        background-color: #2fc3c7;
+        border-color: #2fc3c7;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        unmuteButton.addEventListener("click", function () {
+          document.getElementById("vid").muted = false;
+          this.style.display = "none";
+          document.getElementById("vid").style.maxHeight = `${window.innerHeight}px`
+        });
+        document.getElementById("vid").style.maxHeight = `${window.innerHeight - unmuteArea.clientHeight}px`
+        document.getElementById("vid").play();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <p id="unmuteArea" class="text-center m-0">
+        <a id="unmuteButton" class="btn btn-lg my-2">
+          Unmute Video Sound
+        </a>
+      </p>
+      <div class="d-flex flex-column align-items-center">
+        <video id="vid" name="vid" controls="" autoplay muted playsinline="">
+        
+          <source
+            src="./xmascard.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag please download the video
+          <a href="./xmascard.mp4">here</a>
+        </video>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+</html>
